@@ -1,0 +1,36 @@
+<div class="container">
+  <md-card class="card" *ngIf="user">
+    <md-card-header>
+      <div md-card-avatar>
+        <img class="userthumb" src="{{user.photo}}">
+      </div>
+      <md-card-title>{{user.name}}</md-card-title>
+      <md-card-subtitle>AngularJs Dublin</md-card-subtitle>
+      <p class="toggletitle" >Check In</p>
+      <md-slide-toggle
+              #attending
+              class="toggleswitch"
+              [color]="color"
+              (change)="updateAttendance($event)"
+              [checked]="user.attending"
+              [disabled]="disabled">
+      </md-slide-toggle>
+    </md-card-header>
+    <hr>
+    <md-card-content>
+     <h4>Interested in an Angular Workshop?</h4>
+      <md-radio-group #workshop (change)="workshop.value = $event.value">
+        <md-radio-button class="radio-margin" value="true">Yes!</md-radio-button>
+        <md-radio-button class="radio-margin" value="false">Not really</md-radio-button>
+      </md-radio-group>
+      <h4>Do you have any feedback?</h4>
+      <md-input-container class="full-width">
+        <textarea mdInput class="feedback" #feedback placeholder="Feedback / Suggestions"></textarea>
+      </md-input-container>
+      <button md-raised-button color="primary"
+              (click)="submitFeedback(workshop.value, feedback.value)"
+              [disabled]="(!feedback.value) || !workshop.value"
+      >SUBMIT</button>
+    </md-card-content>
+  </md-card>
+</div>

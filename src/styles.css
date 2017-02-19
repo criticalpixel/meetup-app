@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+body, html {
+    margin: 0;
+    padding:0;
+    width:100%;
+    height:auto;
+}
+
+.full-width {
+    width:100%;
+}
+
+.mat-radio-label-content {
+    position: relative;
+    top:-3px;
+}
+
+.icon {
+    padding: 0 7px;
+    cursor: pointer;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.container {
+    margin: 20px 15px;
+}
+
+.toggleswitch {
+    position: absolute;
+    right:10px;
+}
+
+.toggletitle {
+    position: absolute;
+    top:10px;
+    font-size:12px;
+    right:20px;
+    font-weight: 700;
+}
+
+.feedback {
+    height: 80px;
+    box-sizing:border-box;
+    padding:10px;
+}
+
+.workshop-options {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.radio-margin {
+    margin-right: 15px;
+}
+
+.users {
+    -webkit-column-count: 21;
+    -moz-column-count: 21;
+    column-count: 21;
+    -webkit-column-gap: 0px;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+}
+
+.users img {
+    display: block;
+    width: 100%;
+    opacity: 0.3;
+
+}
+
+.attending {
+    opacity: 1 !important;
+}
+
+.userthumb {
+    width:40px;
+    height:40px;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .users {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    .users img {
+        width:100%;
+
+    }
+}

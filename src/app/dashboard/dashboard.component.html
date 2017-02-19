@@ -1,0 +1,4 @@
+<md-progress-bar *ngIf="!users" mode="indeterminate"></md-progress-bar>
+<div *ngIf="users" class="users">
+    <img *ngFor="let user of users" [ngClass]="{attending: user.attending}" src="{{user.photo}}">
+</div>

@@ -1,0 +1,19 @@
+.searchform {
+    width:100%;
+    font-size: 18px;
+}
+
+.usercard {
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+.user {
+    display:flex;
+}
+
+.user p {
+    display: flex;
+    margin-left:20px;
+    align-items: center;
+}

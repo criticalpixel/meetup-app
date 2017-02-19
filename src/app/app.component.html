@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+  <span class="spacer"></span>
+
+  <button *ngIf="!us.isLoggedIn" (click)="login()" md-button >
+    <md-icon>person</md-icon> LOG IN
+  </button>
+  <md-icon *ngIf="us.isLoggedIn" [routerLink]="['search']" class="icon">
+  search
+</md-icon>
+  <md-icon *ngIf="us.isLoggedIn" [routerLink]="['dashboard']" class="icon">
+    dashboard
+  </md-icon>
+  <md-icon *ngIf="us.isLoggedIn" (click)="logout()" class="icon" >
+    person_outline
+  </md-icon>
+
+</md-toolbar>
+
+<router-outlet></router-outlet>
