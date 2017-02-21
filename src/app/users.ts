@@ -1,10 +1,9 @@
 import {Injectable} from "@angular/core";
-import {FirebaseObjectObservable, AngularFire} from "angularfire2";
+import {AngularFire} from "angularfire2";
 
 @Injectable()
 export class UserService {
     isLoggedIn:boolean;
-    users:FirebaseObjectObservable<any>;
     constructor(public af:AngularFire){
         af.auth.subscribe((auth)=>{
             if(auth){
